@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>查找吉他</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<style>
+	html, body {
+		font-family: 'Lato', 微软雅黑;
+		font-size: 100%;
+		background: #fff;
+	}
+	.form-control{
+		margin-top:0px;
+	}
+	.glyphicon{
+		top:0;
+	}
+	#warning{
+		padding:5px 0;
+	}
+	h2,.input-group{
+		margin-bottom:10px;
+	}
+	.input-group{
+		margin-bottom:5px;
+	}
+</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="col-xs-12 col-md-3 col-lg-3">
+				<h2>吉他查找</h2>
+			</div>
+			<div class="col-xs-12 col-md-9 col-lg-9">
+				<h2>查询结果</h2>
+			</div>
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<hr />
+			</div>
+			<div class="col-xs-12 col-md-3 col-lg-3">
+				<div class="input-group">
+					<span class="input-group-addon" aria-hidden="true">制&ensp;造&ensp;商</span>
+					<input type="text" name="builder" id="builder" placeholder="输入制造商..." class="form-control"/>
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" aria-hidden="true">类&emsp;&emsp;型</span>
+					<input type="text" name="type" id="type" placeholder="输入类型..." class="form-control"/>	
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" aria-hidden="true">背部木料</span>
+					<input type="text" name="backWood" id="backWood" placeholder="输入背部木料..." class="form-control"/>
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" aria-hidden="true">顶部木料</span>
+					<input type="text" name="topWood" id="topWood" placeholder="输入顶部木料..." class="form-control"/>
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" aria-hidden="true">弦&emsp;&emsp;数</span>
+					<input type="text" name="StringNum" id="StringNum" placeholder="输入弦数..." class="form-control"/>
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" aria-hidden="true">型&emsp;&emsp;号</span>
+					<input type="text" name="model" id="model" placeholder="输入型号..." class="form-control"/>
+				</div>
+				<div style="text-align:center;margin-top:10px;">
+					<button class="btn btn-primary btn-block" onclick="search();" >查询</button>			
+				</div>			
+			</div>
+			<div class="col-xs-12 col-md-9 col-lg-9">
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<tr>
+							<th>#</th>
+							<th>制造商</th>
+							<th>型号</th>
+							<th>类型</th>
+							<th>弦数</th>
+							<th>顶部木料</th>
+							<th>背部木料</th>
+							<th>价格</th>
+						</tr>						
+						<tr>
+							<td colspan="8" class="warning" align="center">请先输入查询关键词</td>
+						</tr>
+					</table>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/searchGuitars.js"></script>
+</html>
